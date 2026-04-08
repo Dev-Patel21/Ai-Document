@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1f4d" />
+    <meta name="description" content="DocumentAI – Smart Document Management" />
+    <title>DocumentAI</title>
+
+    <!-- PDF.js — text extraction from PDFs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      if (window.pdfjsLib) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      }
+    </script>
+
+    <!-- Mammoth.js — Word document extraction -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+
+    <!-- Tesseract.js — OCR for images and scanned PDFs -->
+    <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+
+    <!-- JSZip — bundle multiple files into a single ZIP download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run DocumentAI.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
